@@ -1,0 +1,7 @@
+{
+  "name": "reColeta",
+  "description": "Plataforma de coleta seletiva e sustentabilidade para comunidades.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
