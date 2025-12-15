@@ -84,9 +84,23 @@ O **reColeta** utiliza a API do Google Gemini para potencializar a experiência:
 ## 🛠️ Como Executar
 
 1.  Certifique-se de ter um ambiente React configurado.
-2.  Instale as dependências listadas no `importmap` ou `package.json` (React, Leaflet, Lucide, Google GenAI SDK).
-3.  Configure a variável de ambiente `API_KEY` com sua chave da Google Gemini API.
-4.  Execute a aplicação.
+2. Clone o repositório via terminal.
+```
+git clone https://github.com/prsousa8/recoleta.git
+```
+3.  Entre na pasta do repositório clonado.
+```
+cd recoleta
+```
+4.  Instale as dependências listadas no `importmap` ou `package.json` (React, Leaflet, Lucide, Google GenAI SDK).
+```
+npm install
+```
+5.  Crie um arquivo `.env.local` na raiz do projeto e configure a variável de ambiente `GEMINI_API_KEY` com sua chave da Google Gemini API.
+6.  Execute a aplicação.
+```
+npm run dev
+```
 
 > **Nota:** Este projeto utiliza `LocalStorage` para persistência de dados. Para testar diferentes perfis (Morador vs Organização), recomenda-se usar janelas anônimas ou fazer logout/login, pois os dados são salvos no navegador.
 
