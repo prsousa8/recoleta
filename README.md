@@ -23,7 +23,6 @@ A plataforma divide as funcionalidades com base no papel do usuário (`Morador` 
 
 ### 👤 Para Moradores (Residentes)
 *   **Solicitação de Coleta:** Agendamento de retirada de resíduos (Recicláveis, Eletrônicos, Móveis, etc) com upload de fotos.
-*   **Gamificação:** Ganhe XP ao completar desafios ecológicos, suba no ranking regional e troque pontos por recompensas na loja virtual.
 *   **Comunidade:** Feed de notícias local para interagir com vizinhos, ver alertas e participar de projetos (ex: hortas comunitárias).
 *   **EcoBot (IA):** Chatbot flutuante para tirar dúvidas sobre reciclagem e receber dicas sustentáveis.
 *   **Consulta de Horários:** Visualização clara dos dias e horários de coleta seletiva na região.
@@ -31,10 +30,7 @@ A plataforma divide as funcionalidades com base no papel do usuário (`Morador` 
 ### 🏢 Para Organizações (Síndicos/Gestores)
 *   **Gestão de Solicitações:** Painel para aprovar, gerenciar e marcar coletas como realizadas.
 *   **Otimização de Rotas (IA):** O sistema utiliza IA para gerar a rota mais eficiente para os pontos de coleta ativos, economizando tempo e combustível.
-*   **Gestão de Gamificação:** Auditoria de provas enviadas pelos moradores e aprovação de resgate de prêmios.
 *   **Alertas Oficiais:** Envio de comunicados importantes (push notifications simuladas) para os moradores da região.
-*   **Dashboard de Impacto:** Métricas visuais sobre volume reciclado, economia gerada e engajamento.
-
 ---
 
 ## 📂 Estrutura de Pastas
