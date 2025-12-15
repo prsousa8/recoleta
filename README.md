@@ -1,20 +1,17 @@
 
 # reColeta ♻️
 
-**reColeta** é uma plataforma web progressiva (PWA) focada em gestão de resíduos, coleta seletiva inteligente e engajamento comunitário. A aplicação conecta moradores a administradores (condomínios, empresas ou associações), facilitando o descarte correto, otimizando rotas logísticas com Inteligência Artificial e incentivando hábitos sustentáveis através de gamificação.
+**reColeta** é uma plataforma web progressiva (PWA) focada em gestão de resíduos, coleta seletiva inteligente e engajamento comunitário. A aplicação conecta moradores a administradores (condomínios ou associações), facilitando o descarte correto e incentivando hábitos sustentáveis através de gamificação.
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
-O projeto foi construído utilizando uma stack moderna e performática:
-
+O projeto foi construído utilizando uma stack moderna e performática: 
 *   **Frontend:** React 19 (TypeScript)
 *   **Estilização:** Tailwind CSS
 *   **Inteligência Artificial:** Google Gemini API (`@google/genai`)
     *   *Modelos:* gemini-2.5-flash
-*   **Mapas:** Leaflet / React-Leaflet
-*   **Gráficos:** Recharts
 *   **Ícones:** Lucide React
 *   **Persistência de Dados:** LocalStorage (Simulação de Backend/API para MVP)
 
