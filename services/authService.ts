@@ -11,6 +11,7 @@ const initialUsers: User[] = [
     id: 'org-1',
     name: 'Condomínio Solar',
     email: 'admin@solar.com',
+    password: '123456', // Default password for testing
     role: 'organization',
     avatar: 'https://ui-avatars.com/api/?name=Solar&background=10b981&color=fff',
     region: 'Centro',
@@ -25,6 +26,7 @@ const initialUsers: User[] = [
     id: 'user-1',
     name: 'Carlos Morador',
     email: 'carlos@email.com',
+    password: '123456', // Default password for testing
     role: 'resident',
     avatar: 'https://ui-avatars.com/api/?name=Carlos&background=random',
     address: 'Bloco A, Ap 42',
@@ -95,8 +97,8 @@ export const loginUser = async (email: string, password: string): Promise<AuthRe
       const user = users.find(u => u.email.toLowerCase() === email.toLowerCase());
 
       if (!user) {
-        // Fallback for demo convenience
-        if (email.includes('admin')) {
+        // Fallback for demo convenience (Mock Admin)
+        if (email.includes('admin') && password === '123456') {
              const magicOrg: User = {
                 id: Date.now().toString(),
                 name: 'Gestão Temporária',
@@ -114,8 +116,14 @@ export const loginUser = async (email: string, password: string): Promise<AuthRe
              resolve({ user: magicOrg, token: 'mock-token-' + Date.now() });
              return;
         }
-        reject(new Error("Usuário não encontrado."));
+        reject(new Error("Usuário não encontrado ou senha incorreta."));
         return;
+      }
+
+      // Password Validation
+      if (user.password && user.password !== password) {
+         reject(new Error("Senha incorreta."));
+         return;
       }
 
       saveSession(user);
@@ -157,6 +165,7 @@ export const registerUser = async (
         id: Date.now().toString(),
         name,
         email,
+        password, // Save the password
         role,
         avatar: `https://ui-avatars.com/api/?name=${name}&background=random`,
         region,
@@ -203,7 +212,9 @@ export const updateUserProfile = async (updatedData: Partial<User> & { id: strin
         ...updatedData,
         avatar: updatedData.name 
           ? `https://ui-avatars.com/api/?name=${updatedData.name}&background=random`
-          : users[index].avatar
+          : users[index].avatar,
+        // Ensure password persists if not updated
+        password: users[index].password 
       };
 
       users[index] = updatedUser;

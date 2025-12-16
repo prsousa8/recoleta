@@ -176,6 +176,7 @@ export interface User {
   id: string;
   name: string;
   email: string;
+  password?: string; // Field added for basic auth validation
   role: UserRole;
   avatar?: string;
   region: string;
